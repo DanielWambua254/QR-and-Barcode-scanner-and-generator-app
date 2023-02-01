@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/myTv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="QR and Barcode \n scanner and generator"
+        android:textSize="20sp"
+        android:textFontWeight="500"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@id/myTv"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_1" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/myImageView"
+        android:layout_marginTop="24dp"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#7AE1D5D5"
+        app:cardCornerRadius="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/scanTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BARCODE"
+                android:gravity="center"
+                android:textFontWeight="500"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/barCodeLayout"
+                android:layout_width="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/scanTv"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/barCodeScanBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bc_original_scan"
+                        android:layout_weight="0"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SCAN"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/barCodeGenBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bc_original"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="GENERATE"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/generteTv"
+                android:layout_below="@id/barCodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QR CODE"
+                android:gravity="center"
+                android:textFontWeight="500"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/generteTv"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/qrScanBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/qr_search"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SCAN"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/qrGenBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/qr_code"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="GENERATE"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

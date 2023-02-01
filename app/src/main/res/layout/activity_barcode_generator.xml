@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/barcodeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BARCODE"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_below="@id/barcodeTv"
+        android:layout_width="330dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:hint="Enter text here"
+        android:layout_marginTop="20dp"
+        android:background="#4DBB86FC"
+        android:id="@+id/myTextInput"/>
+
+    <ImageView
+        android:id="@+id/barcodeImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="#4DBB86FC"
+        android:layout_below="@id/myTextInput"/>
+
+    <Button
+        android:id="@+id/generateBarCodeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/barcodeImage"
+        android:background="@drawable/btn_bg"
+        android:text="Generate"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/btnsLayout"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/generateBarCodeBtn"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/ic_round_save"/>
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_round_share_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnsLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:text="Save" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:text="Share" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
